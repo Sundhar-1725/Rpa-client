@@ -1,0 +1,42 @@
+header {
+    background: #1b2b54;
+    color: white;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: 3px solid #80e529;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .home-icon {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  header h3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+.main-content{
+    padding: 2rem;
+    background-color: #374a7a;
+}
+.index-card{
+    border-radius: 10rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+.index-card:hover{
+    transform: scale(1.1);
+    
+}
+.card-text{
+    font-weight: bold;
+    text-align: center;
+}

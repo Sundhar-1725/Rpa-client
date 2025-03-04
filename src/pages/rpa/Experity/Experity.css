@@ -1,0 +1,67 @@
+.main-content-section {
+    padding: 0.1rem;
+    margin: 1rem;
+
+}
+
+.top-content {
+    justify-content: space-between;
+    display: flex;
+    padding: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.table {
+    font-size: 0.9rem;
+}
+
+.table thead tr th {
+    background-color: #2a3758;
+    color: white;
+    border: 1px solid
+}
+
+.table tbody tr td {
+    border: 1px solid #2a3758;
+}
+
+.paginator {
+    margin-top: 1rem;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background-color: #2a3758;
+    color: white;
+  }
+.p-paginator .p-paginator-pages .p-paginator-page:hover {
+    background-color: #2a3758;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-prev {
+    color: black;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.p-paginator .p-paginator-next:hover,
+.p-paginator .p-paginator-prev:hover {
+    background-color: #2a3758;
+}
+
+.p-paginator .p-paginator-current {
+    font-weight: bold;
+    color: #333;
+}
+
