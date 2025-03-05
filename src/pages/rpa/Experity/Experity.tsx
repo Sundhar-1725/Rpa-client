@@ -88,7 +88,7 @@ const Experity = () => {
                   /></div>
                   <div className="col-md-3"><label htmlFor="afterDate" style={{ fontWeight: "bold", marginRight: "5px" }}>After Date</label><input type="date" /></div>
                   <div className="col-md-3"><label htmlFor="beforeDate" style={{ fontWeight: "bold", marginRight: "5px" }}>Before Date</label><input type="date" /></div>
-                  <div className="col-md-3"><button className="btn btn-primary">Filter</button></div>
+                  <div className="col-md-3"><button className="btn" style={{backgroundColor:"#2a3758",color:"white"}}>Filter</button></div>
                 </div>
               </div>
               <div className="card-body">

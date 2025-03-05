@@ -1,26 +1,28 @@
 import './index.css'
-import raintree from '../../assets/images/raintree.png'
-import modmed from '../../assets/images/modmed.png'
-import athena from '../../assets/images/athenahealth.png'
-import experity from '../../assets/images/experity.png'
 import Experity from '../rpa/Experity/Experity'
 import Raintree from '../rpa/Raintree'
 import Modmed from '../rpa/Modmed'
 import Athena from '../rpa/Athena'
 import Password from '../pass/Password'
-import pass from '../../assets/images/pass.jpg'
+import { BiLogOutCircle } from "react-icons/bi";
 import { IoHomeOutline } from "react-icons/io5";
 import { handleCard } from '../../slices/Cardslice'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store/store'
+import LogoutModal from './LogoutModal'
+import { useState } from 'react'
 
 const Index = () => {
     
     const dispatch = useDispatch()
+    const [isModelOpen,setModelOpen] = useState(false)
 
     const { activeCard } = useSelector((state: any) => state.cards)
     const handleActiveCard = (value: any) => {
         dispatch(handleCard(value))
+    }
+    const toggleModel = ()=>{
+         setModelOpen(!isModelOpen)
     }
     const experityTotalRequest = useSelector((state:RootState)=>state.patientRequestData.data)
     return (
@@ -29,6 +31,7 @@ const Index = () => {
 
                 <IoHomeOutline className='home-icon' onClick={() => handleActiveCard('home')} />
                 <h3>ROBOTIC PROCESS AUTOMATION</h3>
+                <BiLogOutCircle className='logout-icon ' onClick={toggleModel} style={{cursor:"pointer"}} />
             </header>
 
             {activeCard === 'home' && (
@@ -113,7 +116,7 @@ const Index = () => {
             {activeCard === 'athena' && (
                 <Athena />
             )}
-
+           <LogoutModal toggle={toggleModel} isModelOpen={isModelOpen}/>
         </div>
     )
 }

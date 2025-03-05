@@ -3,6 +3,10 @@ import { NODEAPI } from "../../utils/backApi";
 interface SecretKey{
   secret_key:string
 }
+interface ForgotSecretKeyData{
+    email:string,
+    secret_key:string
+}
 
 class PostSecretKeyApi{
     async postSecretKey(data:SecretKey){
@@ -17,3 +21,17 @@ class PostSecretKeyApi{
     }
 }
 export const postSecretKeyApi = new PostSecretKeyApi()
+
+class ForgotSecretKeyApi{
+    async updatePassword(data:ForgotSecretKeyData){
+        try {
+            const response = NODEAPI.put('/user/forgotsecretkey',data)
+            return response
+            
+        } catch (error) {
+            console.log(error)
+            
+        }
+    }
+}
+export const forgotSecretKeyApi = new ForgotSecretKeyApi()
